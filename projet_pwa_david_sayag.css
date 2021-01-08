@@ -1,0 +1,275 @@
+body, html {
+    background-color: #d2d2d2;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+    font-size:13px;
+    line-height: 14px;
+    margin: 0;
+    padding: 10px 0;
+    height: 50px;
+    color: #0077ff;
+    text-transform: uppercase;
+    text-align: justify;
+    
+}
+
+/* Ecran avec une largeur max de 480px */
+#mainDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 480px;
+    grid-gap: 10px;
+}
+  
+.item{
+    background: rgb(250, 250, 250);
+    border-radius: 20px;
+    max-width: 300px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items:flex-start;
+}
+
+img {
+    width: 100%;
+    height: 200px;
+}
+
+.monBouton {
+    border: none;
+    display: inline-block;
+    width: 100px;
+    padding: 5px 5px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0077ff;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#conteneurBouton{
+    display: flex;
+}
+
+#btnSombre, #btnClair {
+    border: none;
+    width: 50px;
+    height: 40px;
+    padding: 25px 10px 0 10px;
+    margin: 0;
+    text-decoration: none;
+    border-radius:10px 10px 10px 10px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 119, 255, 0.5); 
+    text-align: center;
+    cursor: pointer;
+    top: -15px;
+    position: fixed;
+    left:50%;
+    transform: translatex(-50%);
+}
+
+#btnSombre {
+    color: #fff;
+    background-color: #141414;
+}
+
+#btnClair {
+    color: #000;
+    background-color: #fafafa;
+}
+
+p#btnSombre, p#btnClair {
+    font-size: 12px;
+    line-height:13px;
+}
+
+.item > p {
+    font-size:13px;
+    line-height: 14px;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    min-height: 80px;
+}
+
+/* Mode sombre  */
+
+.modeSombre {
+    background-color:#141414;
+    color: #282800;
+}
+
+.modeSombre .monBouton {
+    background-color: #153963;
+}
+
+.modeSombre .item {
+    background-color: rgb(131, 131, 131);
+    box-shadow: 0px 0px 20px 1px rgba(21, 57, 99, 1); 
+    color: rgb(240, 240, 240);
+}
+
+.modeSombre h4 {
+    color: rgb(0, 34, 73);
+}
+
+/* Ecran avec une largeur de 481px à 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #mainDiv{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 480px;
+    }
+
+    h4{
+        font-size:14px;
+        line-height: 15px;
+        height: 70px;        
+    }
+
+    img {
+        width: 100%;
+        height: 150px;
+    }
+
+    .item > p {
+        min-height: 150px;
+    }
+}
+  
+/* Ecran avec une largeur de 769px à 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #mainDiv{
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 460px;
+    }
+
+    h4{
+        font-size:15px;
+        line-height:16px;
+        height: 85px;        
+    }
+
+    img {
+        width: 100%;
+        height: 120px;
+    }
+
+    .item > p {
+        min-height: 130px;
+    }
+}
+  
+/* Ecran avec une largeur min de 1024 */
+@media screen and (min-width: 1024px) {
+    #mainDiv{
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 460px;
+    }   
+
+    h4{
+        font-size:15px;
+        line-height: 16px;
+        height: 60px;        
+    }
+
+    img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .item > p {
+        min-height: 100px;
+    }
+
+    #btnSombre, #btnClair {
+        border-radius:20px 20px 20px 20px;
+        width: 70px;
+        height: 50px;
+        }
+
+    p#btnSombre, p#btnClair{
+        font-size: 14px;
+        line-height:15px;
+    }
+}
+
+/* Ecran avec une largeur min de 1280 */
+@media screen and (min-width: 1280px) {
+    #mainDiv{
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 460px;
+    }   
+
+    h4{
+        font-size:15px;
+        line-height: 16px;
+        height: 60px;        
+    }
+
+    img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .item > p {
+        min-height: 120px;
+    }
+
+    #btnSombre, #btnClair {
+        border-radius:20px 20px 20px 20px;
+        width: 70px;
+        height: 50px;
+        }
+
+    p#btnSombre, p#btnClair{
+        font-size: 14px;
+        line-height:15px;
+    }
+}
+
+/* Bar de scroll */
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
